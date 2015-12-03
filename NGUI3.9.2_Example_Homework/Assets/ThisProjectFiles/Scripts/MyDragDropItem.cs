@@ -7,7 +7,11 @@ public class MyDragDropItem : UIDragDropItem {
     {
         base.OnDragDropRelease(surface);
 
-        Debug.Log(surface);
+        if (surface.transform.childCount > 0)
+        {
+            Debug.Log(surface);
+        }
+
 
         //居中显示
         this.transform.parent = surface.transform;
